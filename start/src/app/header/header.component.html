@@ -1,0 +1,81 @@
+<div class="page-header-topbar">
+  <div class="page-header-secondary-msg">
+    <ul class="social-icons">
+      <li>
+        <a class="twitter" [routerLink]="'#'"><i class="fa fa-twitter"></i></a>
+      </li>
+      <li>
+        <a class="dribbble" [routerLink]="'#'"
+          ><i class="fa fa-dribbble"></i
+        ></a>
+      </li>
+      <li>
+        <a class="linkedin" [routerLink]="'#'"
+          ><i class="fa fa-linkedin"></i
+        ></a>
+      </li>
+    </ul>
+  </div>
+  <div class="page-header-secondary-nav">
+    <a [routerLink]="'Home'" fragment="search">SEARCH</a>
+    <!-- bind property like attribute-->
+    <a [routerLink]="'Home'" fragment="courses">POPULAR</a>
+    <a [routerLink]="'Home'" fragment="testimony">TESTIMONY</a>
+    <a [routerLink]="'Home'" fragment="services">SERVICES</a>
+    <a [routerLink]="'Home'" fragment="contact">CONTACT</a>
+  </div>
+</div>
+<div class="page-header">
+  <!--Home HEADER-->
+  <div class="page-header-logo">
+    <h2>Angular</h2>
+  </div>
+  <div>
+    <div class="page-header-secondary"></div>
+    <div class="page-header-primary">
+      <div class="page-header-primary-nav">
+        <!-- <a routerLink="" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">Home</a> -->
+        <a
+          routerLink="Home"
+          [routerLinkActive]="'active'"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Home</a
+        >
+        <a
+          [routerLink]="'About'"
+          [routerLinkActive]="'active'"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >ABOUT</a
+        >
+        <a
+          [routerLink]="'Contact'"
+          [routerLinkActive]="'active'"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >CONTACT</a
+        >
+        <a
+          routerLink="Courses"
+          [routerLinkActive]="'active'"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >COURSES</a
+        >
+        <!-- This is also Same from previous -->
+      </div>
+      <div class="page-header-login-logout">
+        <a
+          [routerLink]="'/Login'"
+          [routerLinkActive]="'active'"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >LOGIN</a
+        >
+        <a
+          [routerLink]="'/Login'"
+          [routerLinkActive]="'active'"
+          [routerLinkActiveOptions]="{ exact: true }"
+          [queryParams]="{ logout: true }"
+          >LOGOUT</a
+        >
+      </div>
+    </div>
+  </div>
+</div>

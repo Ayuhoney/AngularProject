@@ -217,3 +217,16 @@ hr{
 .next-course-button:hover {
     opacity: 0.8;
 }
+.courses-detail-main-container{
+    width: 80%;
+    margin: 50px auto;
+    background-color: #efefef;
+    padding: 10px 0px;
+}
+
+.courses-detail-main-container{
+    width: 80%;
+    margin: 50px auto;
+    background-color: #efefef;
+    padding: 10px 0px;
+}

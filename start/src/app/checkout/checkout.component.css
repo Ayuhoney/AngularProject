@@ -174,11 +174,11 @@
     background-color: #fc7e08;
     transition: ease-out 0.1s;
     border:none;
+    border-radius: 2px;
   }
   
   
   .form-box *:focus {
     outline: none;
     border-radius: 1px;
-    border: 3px solid rgb(71, 192, 23);
   }

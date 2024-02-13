@@ -11,6 +11,23 @@ h2{
     color: #28282B;
     padding: 3px 0px;
 }
+.active-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #18bb6f;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+  font-size: 20px;
+  margin-left: 10%;
+}
+
+.active-link:hover {
+  background-color: #21aeb3;
+}
+
 .page-header{
     width: 100%;
     padding: 5px 50px;
@@ -35,6 +52,7 @@ h2{
     width: 26vh;
     text-align: right;
     padding: 15px;
+    display: flex;
 }
 .page-header-secondary-msg{
     width: 160vh;

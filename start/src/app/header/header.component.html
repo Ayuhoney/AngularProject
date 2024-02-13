@@ -5,14 +5,10 @@
         <a class="twitter" [routerLink]="'#'"><i class="fa fa-twitter"></i></a>
       </li>
       <li>
-        <a class="dribbble" [routerLink]="'#'"
-          ><i class="fa fa-dribbble"></i
-        ></a>
+        <a class="dribbble" [routerLink]="'#'"><i class="fa fa-dribbble"></i></a>
       </li>
       <li>
-        <a class="linkedin" [routerLink]="'#'"
-          ><i class="fa fa-linkedin"></i
-        ></a>
+        <a class="linkedin" [routerLink]="'#'"><i class="fa fa-linkedin"></i></a>
       </li>
     </ul>
   </div>
@@ -35,46 +31,18 @@
     <div class="page-header-primary">
       <div class="page-header-primary-nav">
         <!-- <a routerLink="" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}">Home</a> -->
-        <a
-          routerLink="Home"
-          [routerLinkActive]="'active'"
-          [routerLinkActiveOptions]="{ exact: true }"
-          >Home</a
-        >
-        <a
-          [routerLink]="'About'"
-          [routerLinkActive]="'active'"
-          [routerLinkActiveOptions]="{ exact: true }"
-          >ABOUT</a
-        >
-        <a
-          [routerLink]="'Contact'"
-          [routerLinkActive]="'active'"
-          [routerLinkActiveOptions]="{ exact: true }"
-          >CONTACT</a
-        >
-        <a
-          routerLink="Courses"
-          [routerLinkActive]="'active'"
-          [routerLinkActiveOptions]="{ exact: true }"
-          >COURSES</a
-        >
+        <a routerLink="Home" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+        <a [routerLink]="'About'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }">ABOUT</a>
+        <a [routerLink]="'Contact'" [routerLinkActive]="'active'"
+          [routerLinkActiveOptions]="{ exact: true }">CONTACT</a>
+        <a routerLink="Courses" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }">COURSES</a>
         <!-- This is also Same from previous -->
       </div>
+      
       <div class="page-header-login-logout">
-        <a
-          [routerLink]="'/Login'"
-          [routerLinkActive]="'active'"
-          [routerLinkActiveOptions]="{ exact: true }"
-          >LOGIN</a
-        >
-        <a
-          [routerLink]="'/Login'"
-          [routerLinkActive]="'active'"
-          [routerLinkActiveOptions]="{ exact: true }"
-          [queryParams]="{ logout: true }"
-          >LOGOUT</a
-        >
+        <a *ngIf="isLoggedIn()" class="active-link" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }">{{ getUsername() }}</a>
+        <a [ngStyle]="{'fontWeight':'1000'}" *ngIf="!isLoggedIn()" [routerLink]="'/Login'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }">LOGIN</a>
+        <a [ngStyle]="{'marginTop':'10px','fontWeight':'600'}" *ngIf="isLoggedIn()" [routerLink]="'/Login'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }" [queryParams]="{logout:true}">LOGOUT</a>
       </div>
     </div>
   </div>

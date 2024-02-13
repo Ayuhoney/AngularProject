@@ -15,7 +15,6 @@ export class ContactComponent {
   isSubmitted: boolean = false;
 
   OnSubmit(){
-    this.isSubmitted = true;
 
     if(this.isSubmitted == true){
       return alert("Thank for Share you information")

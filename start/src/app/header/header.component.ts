@@ -7,7 +7,19 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
-  isLoggedIn: boolean = false;
+  isLoggedIn(): boolean {
+    return !!localStorage.getItem('currentUser');
+  }
 
-  
+  getUsername(): string {
+
+    const currentUser = localStorage.getItem('currentUser');
+
+    if (currentUser) {
+      const currentUserObj = JSON.parse(currentUser);
+      return currentUserObj.username || '';
+    }
+    return '';
+  }
+
 }

@@ -20,6 +20,7 @@ import { NotFoundComponent } from "./not-found/not-found.component";
 import { CheckoutComponent } from "./checkout/checkout.component";
 import { FormsModule } from "@angular/forms";
 import { RoutingModule } from './routing.module';
+import { FilterPipe } from "./Pipes/filter.pipe";
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { RoutingModule } from './routing.module';
     LoginComponent,
     NotFoundComponent,
     CheckoutComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./courses.component.css']
 })
 export class CoursesComponent implements OnInit {
-  
+
   coursesService = inject(CourseService);
   AllCourses: Course[] = this.coursesService.courses;
   searchString:string;

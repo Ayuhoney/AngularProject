@@ -4,11 +4,13 @@
             <h1>Empower your future with procademy's high quality online coding classes.</h1>
         </div>
     </div>
+
     <div class="courses-page-all-courses">
         <h2>Choose the course best suits you</h2>
         <hr>
         <div class="courses-page-course-list">
-            <div class="course-card" *ngFor="let course of AllCourses">
+            <div class="course-card" *ngFor="let course of AllCourses | filter:'node'">
+
                 <div class="course-image">
                     <img [src]="course.image">
                 </div>
